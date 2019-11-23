@@ -1,0 +1,13 @@
+2019-11-23 学习grpc的python & golang 调用\n
+#python3 安装依赖:\n
+    pip3 install grpcio\n
+    pip3 install grpcio-tools\n
+#编译命令:\n
+    python3 -m grpc_tools.protoc --python_out=. --grpc_python_out=. -I. helloworld.proto
+
+#golang 安装依赖:\n
+    go get -u google.golang.org/grpc\n
+    go get -u github.com/golang/protobuf/protoc-gen-go\n
+#编译命令：\n
+    protoc -I helloworld.proto --go_out=plugins-grpc:helloworld
+    
